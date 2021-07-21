@@ -1,0 +1,367 @@
+html {
+  font-family: Arial;
+  font-size: 62.5%; /*1rem = 10px*/
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 3rem;
+}
+body {
+  background-color: #1c2e3a;
+  color: #3498db;
+}
+.container {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+/* Log-In Form Styles */
+.loginwrapper {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.login-header {
+  text-align: center;
+  font-size: 2rem;
+}
+.loginwrapper input,
+.loginwrapper button {
+  font-size: 1.7rem;
+}
+::placeholder {
+  color: #3498db !important;
+}
+.loginwrapper input {
+  color: #3498db !important;
+}
+#username,
+#password {
+  padding-left: 4rem;
+}
+.username-input,
+.password-input {
+  position: relative;
+}
+.username-input i,
+.password-input i {
+  position: absolute;
+  font-size: 1.6rem;
+  left: 1rem;
+}
+.username-input i {
+  top: 1.8rem;
+}
+.password-input i {
+  top: 1rem;
+}
+.err-msg {
+  color: red;
+  font-size: 1.6rem;
+}
+.login-btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+}
+.login-btn-wrapper {
+  outline: none;
+  border: none;
+}
+/* End of Log-In Form Styles */
+
+/* Navbar */
+.navbar-custom {
+  background-color: #101d25;
+}
+.active {
+  background-color: #1c2e3a;
+}
+.navbar {
+  padding-bottom: 10px;
+}
+.navbar-brand,
+.nav-link {
+  color: #3498db;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.navbar-toggler-icon {
+  /* Change bootstrap hamburger icon, line colors NB: stroke MUST be a rgba value */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(52,152,219, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+  /* Change bootstrap hamburger icon, border color */
+  border-color: #3498db;
+}
+/* End of Navbar */
+
+/* Office Page Styles */
+/* Page styles */
+.pageHeader {
+  /* page header*/
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.embed-responsive-16by9 {
+  margin-bottom: 3rem;
+}
+/* End of Page styles */
+
+/* Wrapper for Controls */
+.controlsWrapper {
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.btnWrapper {
+  /* border: .1px solid #f2f2f2 !important; */
+  background-color: #101d25;
+  padding: 1rem !important;
+  text-align: center;
+  margin: 0.5rem;
+  width: 15rem !important;
+}
+.editSwitchLabel {
+  /* Switch Header Styles */
+  color: #3498db;
+  text-decoration: none !important;
+  transition: all 0.2s !important;
+}
+.editSwitchLabel:hover {
+  cursor: pointer;
+  color: #0056b3;
+}
+/* End of Wrapper for Controls */
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  /* width: 120px;
+    height: 68px; */
+  width: 30px; /* Switch width*/
+  height: 17px; /* Switch height*/
+}
+.switch:hover {
+  cursor: pointer;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: #949494; */
+  background-color: #8baeee;
+  border-radius: 34px;
+}
+.slider:before {
+  /* styles for dot in switch in the slider*/
+  position: absolute;
+  content: "";
+  height: 13px; /* dot height */
+  width: 13px; /* dot width */
+  left: 2px;
+  bottom: 2px; /* position of dot*/
+  background-color: #1c2e3a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 68px;
+}
+input:checked + .slider {
+  background-color: #6196f7;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px); /* x position movement */
+}
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: #008b74;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #586b68;
+}
+
+/* Styles for Temparature, Humidity and Pressure inputs */
+.content {
+  display: flex;
+}
+.mask {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 12.5rem;
+  height: 6.25rem;
+  margin: 1.25rem;
+}
+.semi-circle {
+  position: relative;
+  display: block;
+  width: 12.5rem;
+  height: 6.25rem;
+  background: linear-gradient(
+    to right,
+    #3498db 0%,
+    #05b027 33%,
+    #f1c40f 70%,
+    #c0392b 100%
+  );
+  border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+.semi-circle::before {
+  /*space inside temp & Humidity gauges*/
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 8.75rem;
+  height: 4.375rem;
+  margin-left: -4.375rem;
+  background: #1c2e3a;
+  border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+.semi-circle--mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5rem;
+  height: 12.5rem;
+  background: transparent;
+  transform: rotate(120deg) translate3d(0, 0, 0);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.semi-circle--mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: 2;
+  display: block;
+  width: 12.625rem;
+  height: 6.375rem;
+  margin: -1px 0 0 -1px;
+  background: #f2f2f2;
+  border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+.gaugeHeader,
+#temp,
+#humi {
+  text-align: center;
+}
+#temp,
+#humi {
+  font-size: 30px;
+}
+.gauge--2 .semi-circle {
+  background: #3498db;
+}
+.gauge--2 .semi-circle--mask {
+  transform: rotate(20deg) translate3d(0, 0, 0);
+}
+/* End of Styles for Temparature, Humidity and Pressure inputs */
+/* End of Office Page Styles */
+
+/* Contact Form */
+.contactForm {
+  width: 500px;
+  margin: auto;
+}
+.contactLabel,
+.contactInputs {
+  font-size: 1.6rem;
+  margin: 0 !important;
+}
+/* .contactInputs{
+    margin-bottom: 1.3rem !important;
+} */
+.input-error {
+  border-color: red !important;
+  border-width: 2px !important;
+}
+.contactFormErrMsg {
+  color: red;
+}
+.contact-us-form-btn {
+  font-size: 1.5rem !important;
+  background-color: #3498db;
+  color: white;
+}
+/* End of Contact Form */
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #101d25;
+  width: 100%;
+  z-index: 10;
+}
+.copyright {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+/* End of Footer Styles */
+
+/* ReCaptcha badge On Top */
+.grecaptcha-badge {
+  z-index: 100 !important;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {  /*1200px Screen size */
+  
+  .btnWrapper {
+    /* Switch Wrapper on  */
+    padding: 1rem !important;
+    width: 10rem !important;
+  }
+}
+@media (max-width: 800px) { /*800px Screen size */
+  
+  .btnWrapper {
+    /* Switch Wrapper on  */
+    padding: 1rem !important;
+    width: 10rem !important;
+  }
+}
